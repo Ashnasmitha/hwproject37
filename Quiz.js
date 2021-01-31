@@ -30,12 +30,15 @@ play(){
     this.input2.hide();
     this.input.hide();
     this.button.hide();
-    textSize(30);
-    text("Quiz Result",350,50);
+    background("yellow");
+    textSize(35);
+    text("Quiz Result",250,50);
+    textSize(20);
+    text("NOTE: Contestant who answered correct are highlighted in green",20,180);
     contestant.getContestantInfo();
     if(contestants!==undefined){
         for(var plr in contestants){
-            var correctAns "2";
+            var correctAns = "2";
             if(correctAns=== contestants[plr].answer){
                 fill("green");
             }
@@ -44,7 +47,9 @@ play(){
             }
         display_position+=20;
         textSize(15);
-        text(contestants[plr].name+":"+contestants[plr].answer,50,display_position);
+        for(i=200;i>=displayWidth;i=i+20){
+        text(contestants[plr].name+":"+contestants[plr].answer,50,i);
+        }
     }
 }
 }

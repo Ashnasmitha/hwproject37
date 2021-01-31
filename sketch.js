@@ -14,7 +14,7 @@ function setup(){
 function draw(){
   background("pink");
 
-  if(contestantCount===3){
+  if(contestantCount===4){
     quiz.update(1);
   }
   if(gameState===1){
