@@ -26,17 +26,16 @@ class Quiz{
     }
 }
 play(){
-    this.title.hide();
-    this.input2.hide();
-    this.input.hide();
-    this.button.hide();
+    question.hide();
     background("yellow");
     textSize(35);
     text("Quiz Result",250,50);
-    textSize(20);
-    text("NOTE: Contestant who answered correct are highlighted in green",20,180);
-    contestant.getContestantInfo();
+
+    Contestant.getContestantInfo();
     if(contestants!==undefined){
+        textSize(20);
+        text("NOTE: Contestant who answered correct are highlighted in green",20,180);
+
         for(var plr in contestants){
             var correctAns = "2";
             if(correctAns=== contestants[plr].answer){
@@ -45,7 +44,7 @@ play(){
             else{
                 fill("red");
             }
-        display_position+=20;
+        display_position+=230;
         textSize(15);
         for(i=200;i>=displayWidth;i=i+20){
         text(contestants[plr].name+":"+contestants[plr].answer,50,i);
