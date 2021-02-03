@@ -37,7 +37,7 @@ play(){
     if(contestants!==undefined){
         var display_position=230;
         textSize(20);
-        text("NOTE: Contestant who answered correct are highlighted in green",20,180);
+        text("NOTE: Contestant who answered correct are highlighted in green",100,230);
 
         for(var plr in contestants){
             var correctAns = "2";
