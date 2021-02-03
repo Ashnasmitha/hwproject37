@@ -29,10 +29,13 @@ play(){
     question.hide();
     background("yellow");
     textSize(35);
-    text("Quiz Result",250,50);
-
+    fill(0);
+    text("Quiz Result",350,50);
+    fill("blue");
+    text("----------------------------",320, 65);
     Contestant.getContestantInfo();
     if(contestants!==undefined){
+        var display_position=230;
         textSize(20);
         text("NOTE: Contestant who answered correct are highlighted in green",20,180);
 
@@ -44,11 +47,10 @@ play(){
             else{
                 fill("red");
             }
-        display_position+=230;
+        display_position+=30;
         textSize(15);
-        for(i=200;i>=displayWidth;i=i+20){
-        text(contestants[plr].name+":"+contestants[plr].answer,50,i);
-        }
+     text(contestants[plr].name+":"+contestants[plr].answer,250,display_position);
+        
     }
 }
 }

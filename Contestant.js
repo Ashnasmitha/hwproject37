@@ -5,7 +5,7 @@ class Contestant{
         this.answer=null;
     }
     getCount(){
-        var contestantCountRef=database.ref('contestCount');
+        var contestantCountRef=database.ref('contestantCount');
         contestantCountRef.on("value",function(data){contestantCount=data.val();})
     }
     updateCount(count){

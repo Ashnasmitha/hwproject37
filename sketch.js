@@ -1,6 +1,6 @@
 var gameState=0,
 contestantCount,
-database,quiz,question,contestant,contestants;
+database,quiz,question,contestant,contestants,answer;
 
 function setup(){
   database=firebase.database();

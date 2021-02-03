@@ -37,6 +37,7 @@ class Question{
         
 
         this.button.mousePressed(()=>{
+            this.title.hide();
             this.input2.hide();
             this.input.hide();
             this.button.hide();
